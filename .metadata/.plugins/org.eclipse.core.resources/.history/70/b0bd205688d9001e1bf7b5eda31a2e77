@@ -1,0 +1,17 @@
+package elementos;
+
+import org.openqa.selenium.By;
+
+public class Elementos {
+	
+	
+	protected static By alerts = By.xpath("//div[@class='element-list collapse show']//li[2]");
+	
+
+	public static By click1 = By.xpath("//button[@id='alertButton']");
+	public static By click2 = By.xpath("//button[@id='timerAlertButton']");
+	public static By click3 = By.xpath("//button[@id='confirmButton']");
+	public static By click4 = By.xpath("//button[@id='promtButton']");
+
+
+}

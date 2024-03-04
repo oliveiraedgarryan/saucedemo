@@ -1,0 +1,61 @@
+package tests;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.openqa.selenium.By;
+
+import metodos.Metodos;
+import navagadores.Navegadores;
+import pages.AlertsPage;
+
+
+
+public class ValidarAlerts extends Navegadores{
+	
+	
+	By alerts = By.xpath("//div[@class='element-list collapse show']//li[2]");
+	By botao1 = By.xpath("//button[@id='alertButton']");
+	By botao2 = By.xpath("//button[@id='confirmButton']");
+	By msgbotao2 = By.xpath("//span[@id='confirmResult']");
+	By title = By.xpath("//div [@class='main-header']");
+	
+	
+	String msg1 = "You clicked a button";
+	String msg2 = "This alert appeared after 5 seconds";
+	
+	
+	@BeforeEach
+	public void setup () {
+		Navegadores.abrirNavegador();
+		
+		
+	}
+	
+	
+	
+	@Test
+	public void validarClick1() {
+		AlertsPage.escolherCard("Alerts, Frame & Windows");
+		AlertsPage.escolherAba(alerts);
+		AlertsPage.escolherBotao(botao1);
+		AlertsPage.textAlert(msg1);
+		Metodos.clicarAlert();
+
+	}
+	//@Test
+	public void validarClick2() {
+		Navegadores.abrirNavegador();
+		AlertsPage.escolherCard("Alerts, Frame & Windows");
+		AlertsPage.escolherAba(alerts);
+		AlertsPage.escolherBotao(botao1);
+		AlertsPage.textAlert(msg1);
+		Metodos.clicarAlert();
+
+	}
+	
+	
+	
+
+
+}

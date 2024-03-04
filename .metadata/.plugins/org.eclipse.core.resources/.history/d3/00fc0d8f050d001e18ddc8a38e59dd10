@@ -1,0 +1,15 @@
+package aprendendowhile;
+
+public class FecharPoPUp {
+
+	public static void main(String[] args) {
+		
+		boolean msg = true;
+		
+		while(msg) {
+		System.out.println("clique na imagem");
+		}
+
+	}
+
+}

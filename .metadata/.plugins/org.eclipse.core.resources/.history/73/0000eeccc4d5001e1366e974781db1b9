@@ -1,0 +1,63 @@
+package tests;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+
+import metodos.Metodos;
+import navagadores.Navegadores;
+import pages.AlertsPage;
+
+
+
+public class ValidarAlerts {
+	
+	
+	By alerts = By.xpath("//div[@class='element-list collapse show']//li[2]");
+	By botao1 = By.xpath("//button[@id='alertButton']");
+	By botao2 = By.xpath("//button[@id='confirmButton']");
+	By msgbotao2 = By.xpath("//span[@id='confirmResult']");
+	By title = By.xpath("//div [@class='main-header']");
+	
+	
+	String msg1 = "You clicked a ";
+	String msg2 = "This alert appeared after 5 seconds";
+	
+	
+
+	
+	
+	
+	@Test
+	public void validarBotao1() {
+		Navegadores.abrirNavegador();
+		AlertsPage.escolherCard("Alerts, Frame & Windows");
+		AlertsPage.escolherAba(alerts);
+		AlertsPage.escolherBotao(botao1);
+		AlertsPage.textAlert(msg1);
+		Metodos.clicarAlert();
+
+	}
+	/*Feature: Login de usuario
+
+	como usuario da aplicação deslogado
+	Quero enviar dados validos 
+	para acessar a minha conta
+
+Scenario:Login com sucesso
+	given que nao esteja logado
+	when preencher o campo nome
+	and preecher o campo senha
+	and clicar no botao login
+	then usuario acessa a pagina usuario com sucesso 
+
+Scenario:Login com senha invalida
+	given que nao esteja logado
+	when preencher o campo nome
+	and preecher o campo senha com dados invalidos 
+	and clicar no botao login
+	then usuario acessa a pagina usuario com sucesso 
+	
+
+*/
+}

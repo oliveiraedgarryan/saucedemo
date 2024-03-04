@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\sauce.regressao\src\test\java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\automatizando.demoqa"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\autumacao2024.turma"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\automacaoweb"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\automacao05"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\demoqa\src\test\java\steps\ElementosTest.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\demoqa"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\frame.ui.pages\src\test\java\runner\Navegadores.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\regressaosaucedemo\src\test\java\metodos\MetodosDeTest.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\estudosplataforma"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\saucedemo\src\test\java\saucedemo\loginteste.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\aula.formulario.login\src\test\java\aula\formulario\login\loginTest.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\automacaoweb\src\test\java\automacaoweb\PrimeiroTeste.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\projeto.ligin.unitarios\src\main\java\acessos\LoginUsuario.java"/>
+			<item value="C:\Users\Tatiana\eclipse-workspace\cursojava\aula.metedos"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.saucedemo"/>
+			<item value="br.com.e2etreinamentos"/>
+			<item value="edgar.ryan"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="sauce.regressao"/>
+			<item value="cucumberTest"/>
+			<item value="automatizando.demoqa"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

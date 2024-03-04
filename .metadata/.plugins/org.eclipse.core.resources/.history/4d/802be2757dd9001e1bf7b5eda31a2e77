@@ -1,0 +1,75 @@
+package tests;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.openqa.selenium.By;
+
+import metodos.Metodos;
+import navagadores.Navegadores;
+import pages.AlertsPage;
+
+
+
+public class ValidarAlerts extends Navegadores{
+	
+	
+	By alerts = By.xpath("//div[@class='element-list collapse show']//li[2]");
+	By botao1 = By.xpath("//button[@id='alertButton']");
+	By botao2 = By.xpath("//button[@id='timerAlertButton']");
+	By click3 = By.xpath("//button[@id='confirmButton']");
+	
+	
+	By msgbotao2 = By.xpath("//span[@id='confirmResult']");
+	By msgBt3 = By.xpath("//span[@id='confirmResult']");
+	
+	
+	
+	String msg1 = "You clicked a button";
+	String msg2 = "This alert appeared after 5 seconds";
+	String msg3 = "You selected Ok";
+	
+	@BeforeEach
+	public void setup () {
+		Navegadores.abrirNavegador();
+		AlertsPage.escolherCard("Alerts, Frame & Windows");
+		AlertsPage.escolherAba(alerts);
+		
+	}
+	
+	@AfterEach 
+	public void afterTest() {
+		Navegadores.fecharNavegador();
+	}
+	
+	
+	@Test
+	public void validarClick1() {
+		AlertsPage.escolherBotao(botao1);
+		AlertsPage.textAlert(msg1);
+		Metodos.clicarAlert();
+
+	}
+	@Test
+	public void validarClick2() throws InterruptedException {
+		AlertsPage.escolherBotao(botao2);
+		AlertsPage.pausaAlert();
+		AlertsPage.textAlert(msg2);
+		Metodos.clicarAlert();
+
+	}
+	@Test
+	public void validarClick3(){
+		AlertsPage.escolherBotao(click3);
+		Metodos.clicarAlert();
+	
+		
+
+	}
+	
+	
+	
+
+
+}

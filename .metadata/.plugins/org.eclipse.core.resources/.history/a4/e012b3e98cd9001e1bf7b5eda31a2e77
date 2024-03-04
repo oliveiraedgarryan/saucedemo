@@ -1,0 +1,30 @@
+package navagadores;
+
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import drivers.DriversFactory;
+import pages.AlertsPage;
+
+public class Navegadores  extends DriversFactory{
+	
+	
+	
+	public static void abrirNavegador() {
+		driver = new ChromeDriver();
+		driver.get("https://demoqa.com");
+		driver.manage().window().maximize();
+		
+		
+		
+	}
+	
+	
+	public static void fecharNavegador() {
+		driver.quit();
+		
+		
+	}
+
+	
+
+}

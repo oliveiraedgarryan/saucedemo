@@ -1,0 +1,9 @@
+package sauce.regressao;
+
+public class Executa {
+
+	public Executa() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,117 @@
+package saucedemo;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class loginteste {
+	
+	WebDriver driver ;
+	
+	By userName = By.id("user-name");
+	By passwordMenu = By.id("password");
+	By btnLogin   = By.id("login-button");
+	By msgErrorSenhaInvalida = By.xpath("//h3[@data-test='error']");
+	By msgErrorUserNameEmBRanco = By.xpath("//h3[@data-test='error']");
+	By usuarioBloqueado = By.xpath("//h3[@data-test='error']");
+	By msgUsuarioEsenhaEmBranco = By.xpath("//h3[@data-test='error']");
+
+	String password ="secret_sauce";
+	String usuarioOk = "standard_user";
+	String usuarioBloq = "locked_out_user";
+	String passwordInvalida ="123";
+	String usuarioProblem ="problem_user";
+	String urlCerta ="https://www.saucedemo.com/inventory.html";
+	String msgSenhaInvalida = "Epic sadface: Username and password do not match any user in this service";
+	String usuarioEmBranco	= "";
+	String senhaEmbranco = "";
+	String msgUsuarioEmBranco ="Epic sadface: Username is required";
+	String textUsuarioEsenhaEmBranco="Epic sadface: Username is required";
+	String blockedUser="locked_out_user";
+	String msgblockedUser="Epic sadface: Sorry, this user has been locked out.";
+	
+	//@Test
+	public void loginValido() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.saucedemo.com");
+		driver.findElement(userName).sendKeys(usuarioOk);
+		driver.findElement(passwordMenu).sendKeys(password);
+		driver.findElement(btnLogin).click();
+		assertEquals(urlCerta,driver.getCurrentUrl() );
+		driver.close();
+		
+		}
+	//@Test
+	public void senhaInvalida() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://www.saucedemo.com");
+		driver.findElement(userName).sendKeys(usuarioOk);
+		driver.findElement(passwordMenu).sendKeys(passwordInvalida);
+		driver.findElement(btnLogin).click();
+		assertEquals(msgSenhaInvalida, driver.findElement(msgErrorSenhaInvalida).getText());
+		driver.quit(); 
+		
+		
+
+	}
+     //@Test
+	public void usuarioEmBranco() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://www.saucedemo.com");
+		driver.manage().window().maximize();
+		driver.findElement(userName).sendKeys(usuarioEmBranco);
+		driver.findElement(passwordMenu).sendKeys(password);
+		driver.findElement(btnLogin).click();
+		String msgCapturada = driver.findElement(msgErrorUserNameEmBRanco).getText();
+		assertEquals(msgUsuarioEmBranco, driver.findElement(msgErrorUserNameEmBRanco).getText());
+		driver.close();
+
+
+		
+		
+		
+		
+
+	}
+	//@Test
+	public void dadosEmBranco() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://www.saucedemo.com");
+		driver.manage().window().maximize();
+		driver.findElement(userName).sendKeys(usuarioEmBranco);
+		driver.findElement(passwordMenu).sendKeys(senhaEmbranco);
+		driver.findElement(btnLogin).click();
+		assertEquals(textUsuarioEsenhaEmBranco, driver.findElement(msgUsuarioEsenhaEmBranco).getText() );
+		driver.close();
+		
+	}
+	@Test
+
+	public void bloqueado() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://www.saucedemo.com");
+		driver.manage().window().maximize();
+		driver.findElement(userName).sendKeys(blockedUser);
+		driver.findElement(passwordMenu).sendKeys(password);
+		driver.findElement(btnLogin).click();
+		assertEquals(msgblockedUser, driver.findElement(usuarioBloqueado).getText() );
+		driver.close();
+
+		
+		
+		
+
+	}
+
+}
