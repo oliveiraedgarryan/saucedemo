@@ -1,0 +1,9 @@
+package navegadores;
+
+public class Navegadores {
+
+	public Navegadores() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
